@@ -1,9 +1,14 @@
 {% extends "layout.html" %}
 
-{% block berfin%}
-<p>This place is index..</p>
-{% endblock %}
+{% block body %}
+<div class="jumbotron text-center">
+    <h3>Welcome to the Software Science Blog</h3>
+    <p>You can share your projects in this blog and you can contribute to each other.</p>
+</div>
+<ul>
+    {% for article in articles %}
+        <li>Article Id: {{article.id}} - Title: {{article.title}} - Content: {{article.content}}</li>
+    {% endfor %}
+</ul>
 
-{% block title %}
-<p>Main Page</p>
-{% endblock title %}
+{% endblock %}
